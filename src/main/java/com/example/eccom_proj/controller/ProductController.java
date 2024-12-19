@@ -98,7 +98,7 @@ try{
 
     @GetMapping("/products/search")
     public ResponseEntity<List<Product>> searchProduct(@RequestParam String keyword){
-        System.out.println("searching with "+keyword);
+        System.out.println("searching with for every letter "+keyword);
         List<Product> products =productsService.searchProducts(keyword);
         return new ResponseEntity<>(products,HttpStatus.OK);
     }
